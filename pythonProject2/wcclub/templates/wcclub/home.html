@@ -1,0 +1,15 @@
+{% extends "wcclub/base.html" %}
+{% block content %}
+    {% for post in posts %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <h2>{{ post.title }}</h2>
+              <small class="text-muted">{{ post.date_posted }}</small>
+            </div>
+            {{ post.author }}<br><br>
+            <p class="article-content">{{ post.content }}</p>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
